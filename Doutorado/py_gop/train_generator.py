@@ -130,7 +130,7 @@ def data_func(data_arguments):
             start_idx = step*batch_size
             stop_idx = min(N, (step+1)*batch_size)
     
-            yield x_train[start_idx:stop_idx], y_train[start_idx:stop_idx]
+            yield (x_train[start_idx:stop_idx], y_train[start_idx:stop_idx])
                 
     return gen()
 
